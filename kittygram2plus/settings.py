@@ -142,7 +142,9 @@ REST_FRAMEWORK = {
         'user': '10000/day',  # Лимит для UserRateThrottle
         'anon': '1000/day',  # Лимит для AnonRateThrottle
         'low_request': '1/minute',  # Лимит для скоупа
-    }
+    },
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5,
 }
 
 SIMPLE_JWT = {
